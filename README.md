@@ -1,6 +1,6 @@
 # vite-plugin-frontmatter-collection
 
-Parse the frontmatter of your collection of MD(X) files, and make it accessible through a fully type-safe virtual module. With Zod schemas, HMR, auto-generated ambient types declaration, and more...
+Parse the frontmatter of your collection of MD(X) files, and make it accessible through a fully type-safe virtual module. With Zod schemas, auto-generated ambient types declaration, and frontmatter validation with HMR.
 
 ## Features
 

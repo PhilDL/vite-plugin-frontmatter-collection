@@ -12,6 +12,12 @@
     "url": "https://github.com/PhilDL/vite-plugin-frontmatter-collection"
   },
   "bugs": "https://github.com/PhilDL/vite-plugin-frontmatter-collection/issues",
+  "keywords": [
+    "vite-plugin",
+    "frontmatter",
+    "markdown",
+    "mdx"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
