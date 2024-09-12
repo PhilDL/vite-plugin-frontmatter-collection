@@ -29,8 +29,9 @@
     "build": "tsup src/index.ts --dts --format cjs,esm",
     "dev": "pnpm build --watch",
     "lint": "eslint .",
-    "prepublishOnly": "pnpm build",
-    "release": "bumpp && npm publish"
+    "format": "prettier --write .",
+    "ci": "pnpm lint && pnpm format && pnpm build",
+    "prepublishOnly": "pnpm ci"
   },
   "dependencies": {
     "glob": "11.0.0",
@@ -44,7 +45,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.9",
-    "bumpp": "^9.4.1",
     "eslint": "9.9.0",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",

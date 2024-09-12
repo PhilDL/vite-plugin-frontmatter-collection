@@ -227,7 +227,7 @@ export function frontmatterCollectionPlugin({
       }
       const ambiantDeclarationsString = `// This file is auto-generated. Do not edit manually.
 declare module "virtual:frontmatter-collection" {
-${ambientDeclarations.join("\n")}
+  ${ambientDeclarations.join("\n  ")}
 }
 `;
       const declarationFullPath = path.join(
