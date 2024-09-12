@@ -1,0 +1,13 @@
+node_modules
+tracing_output_folder
+
+/build
+/dist
+/public/build
+/server-build
+/coverage
+
+*.local.*
+.DS_Store
+.env
+.turbo

@@ -1,0 +1,59 @@
+{
+  "name": "vite-plugin-frontmatter-collection",
+  "type": "module",
+  "version": "0.0.1",
+  "packageManager": "pnpm@9.9.0",
+  "description": "Vite plugin that collect frontmatter from your MD/MDX files under a virtual module with HMR invalidation and type-safety",
+  "author": "Philippe L'ATTENTION <https://github.com/PhilDL>",
+  "license": "MIT",
+  "homepage": "https://github.com/PhilDL/vite-plugin-frontmatter-collection",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhilDL/vite-plugin-frontmatter-collection"
+  },
+  "bugs": "https://github.com/PhilDL/vite-plugin-frontmatter-collection/issues",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "dev": "pnpm build --watch",
+    "lint": "eslint .",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp && npm publish"
+  },
+  "dependencies": {
+    "glob": "11.0.0",
+    "gray-matter": "^4.0.3",
+    "zod-to-ts": "^1.2.0"
+  },
+  "peerDependencies": {
+    "vite": "^2.9.0 || ^3.0.0 || ^4.0.0 || ^5.0.0",
+    "typescript": "^4.9.4 || ^5.0.2",
+    "zod": "^3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "bumpp": "^9.4.1",
+    "eslint": "9.9.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.3",
+    "zod": "3.23.8",
+    "globals": "15.9.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "prettier": "3.3.3",
+    "typescript-eslint": "8.1.0",
+    "@eslint/eslintrc": "3.1.0"
+  }
+}
