@@ -28,5 +28,5 @@ jobs:
       - name: Install dependencies
         run: pnpm i
 
-      - name: Run CI
-        run: pnpm run ci
+      - name: Run validate
+        run: pnpm run validate
