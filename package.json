@@ -31,7 +31,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "ci": "pnpm lint && pnpm format && pnpm build",
-    "prepublishOnly": "pnpm ci"
+    "prepublishOnly": "pnpm ci",
+    "local-release": "pnpm changeset version && pnpm changeset publish"
   },
   "dependencies": {
     "glob": "11.0.0",
@@ -39,22 +40,23 @@
     "zod-to-ts": "^1.2.0"
   },
   "peerDependencies": {
-    "vite": "^2.9.0 || ^3.0.0 || ^4.0.0 || ^5.0.0",
     "typescript": "^4.9.4 || ^5.0.2",
+    "vite": "^2.9.0 || ^3.0.0 || ^4.0.0 || ^5.0.0",
     "zod": "^3"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.8",
+    "@eslint/eslintrc": "3.1.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@types/node": "^20.14.9",
     "eslint": "9.9.0",
+    "eslint-plugin-import-x": "3.1.0",
+    "globals": "15.9.0",
+    "prettier": "3.3.3",
     "tsup": "^8.2.4",
     "typescript": "^5.5.4",
-    "vite": "^5.4.3",
-    "zod": "3.23.8",
-    "globals": "15.9.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
-    "prettier": "3.3.3",
     "typescript-eslint": "8.1.0",
-    "@eslint/eslintrc": "3.1.0",
-    "eslint-plugin-import-x": "3.1.0"
+    "vite": "^5.4.3",
+    "zod": "3.23.8"
   }
 }
