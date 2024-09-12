@@ -23,13 +23,11 @@ Add it to `vite.config.js`
 ```ts
 // vite.config.js
 import { defineConfig } from "vite";
-import { z } from "zod";
-
 import {
   defineCollection,
   frontmatterCollectionPlugin,
 } from "vite-plugin-frontmatter-collection";
-
+import { z } from "zod";
 import { FormationCollectionSchema } from "./app/content-collections-schemas";
 
 export default defineConfig({
@@ -64,7 +62,6 @@ export default defineConfig({
     }),
   ],
 });
-
 ```
 
 Now you can import the collection in your code
@@ -78,36 +75,38 @@ With default options, you have types that are auto-generated from the schemas an
 ```ts
 // This file is auto-generated. Do not edit manually.
 declare module "virtual:frontmatter-collection" {
-export const blogEntries: {
-  title?: string | undefined;
-  description?: string | undefined;
-  author: string;
-  date: Date;
-  category?: string | undefined;
-  filePath: string;
-}[];
-export const formationsEntries: {
-  meta: {
-      [x: string]: string;
+  export const blogEntries: {
+    title?: string | undefined;
+    description?: string | undefined;
+    author: string;
+    date: Date;
+    category?: string | undefined;
+    filePath: string;
   }[];
-  handle?: any | undefined;
-  headers?: {
+  export const formationsEntries: {
+    meta: {
       [x: string]: string;
-  } | undefined;
-  date: Date;
-  image: string;
-  thumbnail: string;
-  tags?: string[] | undefined;
-  title?: string | undefined;
-  description?: string | undefined;
-  level?: number;
-  durationHours: number;
-  durationDays: number;
-  price: number;
-  nextStartDate?: Date | undefined;
-  groupSize?: string | undefined;
-  filePath: string;
-}[];
+    }[];
+    handle?: any | undefined;
+    headers?:
+      | {
+          [x: string]: string;
+        }
+      | undefined;
+    date: Date;
+    image: string;
+    thumbnail: string;
+    tags?: string[] | undefined;
+    title?: string | undefined;
+    description?: string | undefined;
+    level?: number;
+    durationHours: number;
+    durationDays: number;
+    price: number;
+    nextStartDate?: Date | undefined;
+    groupSize?: string | undefined;
+    filePath: string;
+  }[];
 }
 ```
 

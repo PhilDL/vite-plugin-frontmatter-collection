@@ -6,9 +6,8 @@ export default tseslint.config(
   {
     // Globally ignored files
     ignores: [
-      "**/.eslintrc.cjs",
-      "**/*.config.js",
-      "**/*.config.cjs",
+      "**/.prettierrc.js",
+      "eslint.config.js",
       "dist",
       "pnpm-lock.yaml",
       "**/build",

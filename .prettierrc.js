@@ -5,9 +5,7 @@
 const config = {
   printWidth: 80,
   tabWidth: 2,
-  plugins: [
-    "@ianvs/prettier-plugin-sort-imports",
-  ]
+  plugins: ["@ianvs/prettier-plugin-sort-imports"],
 };
 
 export default config;

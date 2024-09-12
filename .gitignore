@@ -3,8 +3,6 @@ tracing_output_folder
 
 /build
 /dist
-/public/build
-/server-build
 /coverage
 
 *.local.*
