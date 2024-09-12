@@ -30,8 +30,8 @@
     "dev": "pnpm build --watch",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "ci": "pnpm lint && pnpm format && pnpm build",
-    "prepublishOnly": "pnpm ci",
+    "validate": "pnpm lint && pnpm format && pnpm build",
+    "prepublishOnly": "pnpm validate",
     "local-release": "pnpm changeset version && pnpm changeset publish"
   },
   "dependencies": {
